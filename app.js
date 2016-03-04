@@ -22,6 +22,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use("/public/css",express.static(__dirname + "/public/css"));
+
 // var db-connection-string = "";
 // app.use(orm.express(string, {
 //     define: function (db, models, next) {
