@@ -2,13 +2,12 @@ var express = require('express');
 var router = express.Router();
 
 var entries = [
-  {slug:"how to pass class", body: "come to class. do your homework", created_at: "some date"},
-  {slug:"how to fail class", body: "play video games all day", created_at: "some date"}
-];
+  {Entry:"Entry 1", body: "I leaned how to use git today!", created_at: "3/4/2016"},
+
 
 /* READ all: GET entries listing. */
 router.get('/', function(req, res, next) {
-  res.render('entries/index', { title: 'Blog', entries: entries });
+  res.render('entries/index', { title: 'Today I Learned', entries: entries });
 });
 
 /* CREATE entry form: GET /entries/new */
@@ -19,7 +18,7 @@ router.get('/new', function(req, res, next) {
 /*CREATE entry: POST /entries/ */
 router.post('/', function(req, res, next) {
   entries.push(req.body);
-  res.render('entries/index', { title: 'Blog', entries: entries });
+  res.render('entries/index', { title: 'Today I learned', entries: entries });
 });
 
 /* UPDATE entry form: GET /entries/1/edit */
