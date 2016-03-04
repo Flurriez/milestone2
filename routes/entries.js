@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var entries = [
-  {Entry:"Entry 1", body: "I leaned how to use git today!", created_at: "3/4/2016"},
-];
+var entries = [];
 
 /* READ all: GET entries listing. */
 router.get('/', function(req, res, next) {
