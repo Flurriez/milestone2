@@ -1,8 +1,9 @@
 <% include ../head %>
-<form action='/new' method='POST'>
-  Entry: <input type = "text" name = 'entry'/>
+<form action='/login' method='POST'>
+  Username: <input type="text" name='email' />
   <br />
-  Body: <input type = "text" name = 'body'/>
+  Password: <input type="password" name='password' />
   <input type="submit">
+  <br/>
 </form>
 <% include ../footer %>
