@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use("/public/css",express.static(__dirname + "/public/css"));
 
-var orm = require('orm');
+var orm = require('orm')
 
 var db_string = "";
 var string = process.env.DATABASE_URL || db_string;
